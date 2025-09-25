@@ -19,15 +19,7 @@ export default function CyKorSite() {
   return (
     <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
       {/* Header */}
-      <header className="max-w-6xl mx-auto flex items-center justify-between p-4">
-        <div className="bg-black dark:bg-white rounded-lg p-2">
-          <img
-            src="/[CyKor]logo.png"
-            alt="CyKor Logo"
-            className="h-20 w-auto"
-          />
-        </div>
-
+      <header className="max-w-6xl mx-auto flex items-center justify-end p-4">
         {/* Light/Dark toggle */}
         <button
           onClick={() => setDarkMode(!darkMode)}
@@ -44,9 +36,15 @@ export default function CyKorSite() {
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-4 py-12">
         <Card className="bg-gray-100 text-black dark:bg-neutral-900 dark:text-white border border-gray-300 dark:border-neutral-800 p-6 rounded-2xl shadow-md transition-colors duration-300">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            <span className="text-red-500">CyKor</span>
-          </h2>
+          <div className="flex items-center justify-center mb-3">
+            <div className="bg-white dark:bg-white rounded-lg p-2">
+              <img
+                src="/[CyKor]logo.png"
+                alt="CyKor Logo"
+                className="h-16 w-auto"
+              />
+            </div>
+          </div>
           <h3 className="text-xl md:text-2xl font-semibold mb-3">
             <span className="text-red-500">Cy</span>ber security club at{" "}
             <span className="text-red-500">Kor</span>ea university
@@ -81,11 +79,20 @@ export default function CyKorSite() {
             study cybersecurity, develop projects, and compete in domestic &
             international Capture The Flag (CTF) competitions.
           </p>
-          <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
-            <li>CTF practice & competitions</li>
-            <li>Seminars and conference-level talks</li>
-            <li>Collaborations with other university clubs</li>
-          </ul>
+          <div className="text-gray-600 dark:text-gray-400 space-y-1 max-w-md mx-auto">
+            <div className="flex items-center text-left">
+              <span className="w-1.5 h-1.5 bg-gray-600 dark:bg-gray-400 rounded-full mr-3 flex-shrink-0 mt-2"></span>
+              <span>CTF practice & competitions</span>
+            </div>
+            <div className="flex items-center text-left">
+              <span className="w-1.5 h-1.5 bg-gray-600 dark:bg-gray-400 rounded-full mr-3 flex-shrink-0 mt-2"></span>
+              <span>Seminars and conference-level talks</span>
+            </div>
+            <div className="flex items-center text-left">
+              <span className="w-1.5 h-1.5 bg-gray-600 dark:bg-gray-400 rounded-full mr-3 flex-shrink-0 mt-2"></span>
+              <span>Collaborations with other university clubs</span>
+            </div>
+          </div>
         </Card>
       </section>
 
